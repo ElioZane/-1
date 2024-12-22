@@ -12,9 +12,13 @@ from cle.cle.utils.op import Gaussian_sample
 from scipy.io import wavfile
 
 
-data_path = '/data/lisatmp3/chungjun/data/blizzard_unseg/'
-save_path = '/data/lisatmp/chungjun/nips2015/blizzard/sample/'
-pkl_path = '/data/lisatmp/chungjun/nips2015/blizzard/pkl/'
+data_path = 'data/processed/'
+save_path = 'models/blizzard/sample/'
+pkl_path = 'models/blizzard/pkl/'
+
+import os
+os.makedirs(save_path, exist_ok=True)
+os.makedirs(pkl_path, exist_ok=True)
 
 frame_size = 200
 # How many samples to generate
